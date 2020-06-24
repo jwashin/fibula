@@ -7,7 +7,10 @@ import (
 	"github.com/gorilla/mux"
 )
 
-func main() {
+func main() {}
+
+/*Init only initializes the http server for testing*/
+func Init() {
 	r := makeRouter()
 	http.Handle("/", r)
 }
