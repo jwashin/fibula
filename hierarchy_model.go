@@ -4,13 +4,15 @@ package main
 
 import (
 	"context"
+	"sort"
 
 	"cloud.google.com/go/datastore"
 )
 
-// Event is data about the competition event
-type Event struct {
+// CompetitionEvent is data about the competition event
+type CompetitionEvent struct {
 	ID                *datastore.Key `json:"id" datastore:"__key__"`
+	Active            bool           `json:"Active"`
 	State             string         `json:"state"`
 	Level             string         `json:"level"`
 	Organization      string         `json:"organization"`
@@ -26,9 +28,9 @@ type Event struct {
 	Regions           []string       `json:"regions"`
 }
 
-func getEvent(db *datastore.Client, key *datastore.Key) (*Event, error) {
+func getEvent(db *datastore.Client, key *datastore.Key) (*CompetitionEvent, error) {
 	context := context.Background()
-	var e Event
+	var e CompetitionEvent
 
 	err := db.Get(context, key, e)
 	// fmt.Printf("this error is from Get: %v", err)
@@ -39,11 +41,11 @@ func getEvent(db *datastore.Client, key *datastore.Key) (*Event, error) {
 	return &e, nil
 }
 
-func (s *School) updateEvent(db *datastore.Client) error {
+func (e *CompetitionEvent) updateEvent(db *datastore.Client) error {
 	context := context.Background()
-	if s.ID != nil {
-		productKey := s.ID
-		_, err := db.Put(context, productKey, s)
+	if e.ID != nil {
+		eventKey := e.ID
+		_, err := db.Put(context, eventKey, e)
 		if err != nil {
 			return err
 		}
@@ -52,11 +54,11 @@ func (s *School) updateEvent(db *datastore.Client) error {
 
 }
 
-func (s *School) deleteEvent(db *datastore.Client) error {
+func (e *CompetitionEvent) deleteEvent(db *datastore.Client) error {
 	context := context.Background()
 
-	productKey := s.ID
-	err := db.Delete(context, productKey)
+	eventKey := e.ID
+	err := db.Delete(context, eventKey)
 	if err != nil {
 		return err
 
@@ -64,10 +66,10 @@ func (s *School) deleteEvent(db *datastore.Client) error {
 	return nil
 }
 
-func (s *School) createEvent(db *datastore.Client) error {
+func (e *CompetitionEvent) createEvent(db *datastore.Client) error {
 	context := context.Background()
-	schoolKey := datastore.IncompleteKey("School", nil)
-	_, err := db.Put(context, schoolKey, s)
+	eventKey := datastore.IncompleteKey("CompetitionEvent", nil)
+	_, err := db.Put(context, eventKey, e)
 	if err != nil {
 		return err
 	}
@@ -75,26 +77,33 @@ func (s *School) createEvent(db *datastore.Client) error {
 
 }
 
-func getEvents(db *datastore.Client, event *datastore.Key, region string) ([]School, error) {
+func (e *CompetitionEvent) createRegion(db *datastore.Client, region string) []string {
+
+	e.Regions = append(e.Regions, region)
+	sort.Strings(e.Regions)
+	db.Put(context.Background(), e.ID, e)
+
+	return e.Regions
+}
+
+func getEvents(db *datastore.Client, active bool) ([]CompetitionEvent, error) {
 
 	context := context.Background()
-	query := datastore.NewQuery("School")
-	if event != nil {
-		query.Filter("Event=", event)
+	query := datastore.NewQuery("CompetitionEvent")
+	if active != false {
+		query.Filter("Active=", active)
 	}
-	if region != "" {
-		query.Filter("Region=", region)
-	}
-	var schools []School
-	_, err := db.GetAll(context, query, schools)
+
+	var events []CompetitionEvent
+	_, err := db.GetAll(context, query, events)
 
 	if err != nil {
 		if err == datastore.ErrInvalidEntityType {
-			// we got "invalid entity type". return empty list
-			return []School{}, nil
+			// We got "invalid entity type". return empty list
+			return []CompetitionEvent{}, nil
 		}
 	}
-	return schools, err
+	return events, err
 }
 
 /*Schools**********************************************************/
@@ -105,6 +114,7 @@ type School struct {
 	Name   string         `json:"name"`
 	Region string         `json:"region"`
 	Town   string         `json:"town"`
+	Active bool           `json:"active"`
 	Event  *datastore.Key
 }
 
@@ -158,7 +168,7 @@ func (s *School) createSchool(db *datastore.Client) error {
 
 }
 
-func getSchools(db *datastore.Client, event *datastore.Key, region string) ([]School, error) {
+func getSchools(db *datastore.Client, event *datastore.Key, region string, active bool) ([]School, error) {
 
 	context := context.Background()
 	query := datastore.NewQuery("School")
@@ -167,6 +177,9 @@ func getSchools(db *datastore.Client, event *datastore.Key, region string) ([]Sc
 	}
 	if region != "" {
 		query.Filter("Region=", region)
+	}
+	if active != false {
+		query.Filter("Active=", active)
 	}
 	var schools []School
 	_, err := db.GetAll(context, query, schools)
