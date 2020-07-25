@@ -1,4 +1,4 @@
-module github.com/jwashin/gomuxtutorial.git
+module github.com/jwashin/fibula.git
 
 go 1.13
 
@@ -7,5 +7,5 @@ require (
 	github.com/gorilla/mux v1.7.4
 	google.golang.org/api v0.29.0
 
-	google.golang.org/genproto v0.0.0-20200715011427-11fb19a81f2c
+	google.golang.org/genproto v0.0.0-20200724131911-43cab4749ae7
 )

@@ -1,0 +1,13 @@
+{
+    "base":{
+
+    },
+    "exams":[
+        {
+            "maxRegistrants":"0",
+            "title":"Example Quiz",
+            "registration":"single",
+            "maxGradeLevel":""
+        }
+    ]
+}

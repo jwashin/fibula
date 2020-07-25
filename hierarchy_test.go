@@ -1,4 +1,4 @@
-// main_test.go
+// hierarchy_test.go
 
 package main
 
@@ -58,7 +58,7 @@ func clearProducts() {
 func TestEmptyTable(t *testing.T) {
 	clearProducts()
 
-	req, _ := http.NewRequest("GET", "/products", nil)
+	req, _ := http.NewRequest("GET", "/events", nil)
 
 	response := executeRequest(req)
 	checkResponseCode(t, http.StatusOK, response.Code)

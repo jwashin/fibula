@@ -1,6 +1,6 @@
 // model.go
 
-package main
+package productapp
 
 import (
 	"context"

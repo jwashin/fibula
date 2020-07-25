@@ -3,7 +3,7 @@
 package main
 
 func main() {
-	a := App{}
+	a := productapp.App{}
 	a.Initialize()
 	a.Run(":8080")
 }
