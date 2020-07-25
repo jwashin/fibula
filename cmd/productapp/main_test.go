@@ -14,10 +14,9 @@ import (
 	"testing"
 
 	"cloud.google.com/go/datastore"
-	"github.com/jwashin/fibula/productapp"
 )
 
-var a productapp.App
+var a App
 
 func TestMain(m *testing.M) {
 	a.Initialize()
@@ -149,7 +148,7 @@ func addProducts(count int) {
 	}
 	for i := 0; i < count; i++ {
 		idstr := strconv.Itoa(i + 1)
-		s := productapp.Product{Name: "Product" + idstr, ID: idstr}
+		s := Product{Name: "Product" + idstr, ID: idstr}
 		k := datastore.NameKey("Product", idstr, nil)
 		_, err := client.Put(ctx, k, &s)
 		if err != nil {
