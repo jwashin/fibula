@@ -9,7 +9,6 @@ import sys
 
 #for item in sorted(sys.path):
 #    print item
-#from vafbla.models import ContestRoot
 #from ZODB.FileStorage import FileStorage
 #from ZODB.DB import DB
 #import jsonrpclib

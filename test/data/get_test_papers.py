@@ -9,7 +9,6 @@
 
 #for item in sorted(sys.path):
 #    print item
-#from vafbla.models import ContestRoot
 #from ZODB.FileStorage import FileStorage
 #from ZODB.DB import DB
 #import jsonrpclib
@@ -91,7 +90,7 @@ if __name__ == '__main__':
 #for item in client.list_all_events():
 #    print ("{}".format(item))
 #
-#exams_location = '/home/jwashin/vpythons/fbla_2012/vafbla/exams_test/'
+#exams_location = '/home/jwashin/vpythons/2012/vafbla/exams_test/'
 #
 #contest_info = json.load(open('test_quiz_data.json', 'r'))
 #
