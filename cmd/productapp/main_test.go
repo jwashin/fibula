@@ -10,13 +10,14 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"os"
-	"strconv"
 	"testing"
 
 	"cloud.google.com/go/datastore"
 )
 
 var a App
+
+// var usedKeys []*datastore.Key
 
 func TestMain(m *testing.M) {
 	a.Initialize()
@@ -28,17 +29,10 @@ func TestMain(m *testing.M) {
 func clearProducts() {
 	// get all the keys for Products
 	ctx := context.Background()
-	// add one first just so all this doesn't fail
-	// addProducts(1)
 	client, _ := datastore.NewClient(ctx, "")
-	qry := datastore.NewQuery("Product").KeysOnly()
-	// var keylist []*datastore.Key
-	keys, err := client.GetAll(ctx, qry, nil)
 
-	if err != nil {
-		fmt.Printf("%v", err)
-		return
-	}
+	keysQuery := datastore.NewQuery("Product").KeysOnly()
+	keys, _ := client.GetAll(ctx, keysQuery, nil)
 
 	// if any, delete them
 	if len(keys) > 0 {
@@ -100,7 +94,8 @@ func TestCreateProduct(t *testing.T) {
 
 	clearProducts()
 
-	var jsonStr = []byte(`{"name":"test product", "id": "1", "price": 11.22}`)
+	// var jsonStr = []byte(`{"name":"test product", "id": "1", "price": 11.22}`)
+	var jsonStr = []byte(`{"name":"test product", "price": 11.22}`)
 	req, _ := http.NewRequest("POST", "/product", bytes.NewBuffer(jsonStr))
 	req.Header.Set("Content-Type", "application/json")
 
@@ -120,9 +115,10 @@ func TestCreateProduct(t *testing.T) {
 
 	// the id is compared to 1.0 because JSON unmarshaling converts numbers to
 	// floats, when the target is a map[string]interface{}
-	if m["id"] != "1" {
-		t.Errorf("Expected product ID to be '1'. Got '%v'", m["id"])
-	}
+
+	// if m["id"] != "1" {
+	// t.Errorf("Expected product ID to be '1'. Got '%v'", m["id"])
+	// }
 }
 
 func TestGetProduct(t *testing.T) {
@@ -147,10 +143,12 @@ func addProducts(count int) {
 		fmt.Printf("Could not add item to database: %v", err)
 	}
 	for i := 0; i < count; i++ {
-		idstr := strconv.Itoa(i + 1)
-		s := Product{Name: "Product" + idstr, ID: idstr}
-		k := datastore.NameKey("Product", idstr, nil)
-		_, err := client.Put(ctx, k, &s)
+		// idstr := strconv.Itoa(i + 1)
+		key := datastore.Key{Kind: "Product", ID: int64(i + 1)}
+		s := Product{Name: "Product", Price: 33.45}
+		// k := datastore.NameKey("Product", idstr, nil)
+		_, err := client.Put(ctx, &key, &s)
+		// fmt.Printf("Adding %v to database", key)
 		if err != nil {
 			fmt.Printf("Could not add item to database: %v ", err)
 		}

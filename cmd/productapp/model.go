@@ -8,15 +8,16 @@ import (
 	"cloud.google.com/go/datastore"
 )
 
+/*id SERIAL,
+    name TEXT NOT NULL,
+    price NUMERIC(10,2) NOT NULL DEFAULT 0.00,
+	CONSTRAINT products_pkey PRIMARY KEY (id)*/
+
 // Product has the basic info about the Product
 type Product struct {
-	/*id SERIAL,
-	    name TEXT NOT NULL,
-	    price NUMERIC(10,2) NOT NULL DEFAULT 0.00,
-		CONSTRAINT products_pkey PRIMARY KEY (id)*/
-	ID    string  `json:"id"`
-	Name  string  `json:"name"`
-	Price float32 `json:"price"`
+	ID    *datastore.Key `json:"id" datastore:"__key__"`
+	Name  string         `json:"name"`
+	Price float32        `json:"price"`
 }
 
 // // Product is product information
@@ -28,12 +29,14 @@ type Product struct {
 
 func (p *Product) getProduct(db *datastore.Client) error {
 	context := context.Background()
-	if p.ID != "" {
-		productKey := datastore.NameKey("Product", p.ID, nil)
-		err := db.Get(context, productKey, p)
+	key := p.ID
+	if key != nil {
+		// productKey := datastore.NameKey("Product", p.ID, nil)
+		err := db.Get(context, key, p)
 		// t, err := json.Marshal(p)
-		// fmt.Printf("this error is from Get: %v", err)
+
 		if err != nil {
+			// fmt.Printf("this error is from Get: %v (%v)", err, key)
 			return err
 		}
 	}
@@ -42,8 +45,8 @@ func (p *Product) getProduct(db *datastore.Client) error {
 
 func (p *Product) updateProduct(db *datastore.Client) error {
 	context := context.Background()
-	if p.ID != "" {
-		productKey := datastore.NameKey("Product", p.ID, nil)
+	if p.ID != nil {
+		productKey := p.ID
 		_, err := db.Put(context, productKey, p)
 		if err != nil {
 			return err
@@ -55,9 +58,9 @@ func (p *Product) updateProduct(db *datastore.Client) error {
 
 func (p *Product) deleteProduct(db *datastore.Client) error {
 	context := context.Background()
-	if p.ID != "" {
-		productKey := datastore.NameKey("Product", p.ID, nil)
-		err := db.Delete(context, productKey)
+	if p.ID != nil {
+		// productKey := datastore.NameKey("Product", p.ID, nil)
+		err := db.Delete(context, p.ID)
 		if err != nil {
 			return err
 		}
@@ -67,15 +70,12 @@ func (p *Product) deleteProduct(db *datastore.Client) error {
 
 func (p *Product) createProduct(db *datastore.Client) error {
 	context := context.Background()
-	if p.ID != "" {
-		productKey := datastore.NameKey("Product", p.ID, nil)
-		_, err := db.Put(context, productKey, p)
-		if err != nil {
-			return err
-		}
+	productKey := datastore.IncompleteKey("Product", nil)
+	_, err := db.Put(context, productKey, p)
+	if err != nil {
+		return err
 	}
 	return nil
-
 }
 
 func getProducts(db *datastore.Client, start, count int) ([]Product, error) {

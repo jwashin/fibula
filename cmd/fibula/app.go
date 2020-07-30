@@ -41,23 +41,23 @@ func (a *App) Initialize() {
 // Run runs the app
 func (a *App) Run(addr string) {}
 
-func (a *App) getProduct(w http.ResponseWriter, r *http.Request) {
+func (a *App) getEvent(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
-	idNumber, err := strconv.Atoi(vars["id"])
 
+	idNum, err := strconv.Atoi(vars["id"])
+	// key, err := datastore.DecodeKey(id)
+	// key := datastore.IDKey("Event", int64(idNum), nil)
 	if err != nil {
-		respondWithError(w, http.StatusBadRequest, "Invalid product ID")
+		respondWithError(w, http.StatusNotFound, "Bad Key")
+	}
+	// event := Event{ID: key}
+	var event Event
+
+	if err = event.getEvent(a.DB, idNum); err != nil {
+		respondWithError(w, http.StatusNotFound, "Event not found")
 		return
 	}
-	key := datastore.IDKey("Product", int64(idNumber), nil)
-
-	p := Product{ID: key}
-	if err := p.getProduct(a.DB); err != nil {
-		respondWithError(w, http.StatusNotFound, "Product not found")
-		return
-	}
-
-	respondWithJSON(w, http.StatusOK, p)
+	respondWithJSON(w, http.StatusOK, event)
 }
 
 func respondWithError(w http.ResponseWriter, code int, message string) {
@@ -72,79 +72,68 @@ func respondWithJSON(w http.ResponseWriter, code int, payload interface{}) {
 	w.Write(response)
 }
 
-func (a *App) getProducts(w http.ResponseWriter, r *http.Request) {
-	count, _ := strconv.Atoi(r.FormValue("count"))
-	start, _ := strconv.Atoi(r.FormValue("start"))
+func (a *App) getEvents(w http.ResponseWriter, r *http.Request) {
 
-	if count > 10 || count < 1 {
-		count = 10
-	}
-	if start < 0 {
-		start = 0
-	}
-
-	products, err := getProducts(a.DB, start, count)
+	events, err := getEvents(a.DB)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, err.Error())
 		return
 	}
 
-	respondWithJSON(w, http.StatusOK, products)
+	respondWithJSON(w, http.StatusOK, events)
 }
 
-func (a *App) createProduct(w http.ResponseWriter, r *http.Request) {
-	var p Product
+func (a *App) createEvent(w http.ResponseWriter, r *http.Request) {
+	var e Event
 	decoder := json.NewDecoder(r.Body)
-
-	if err := decoder.Decode(&p); err != nil {
+	if err := decoder.Decode(&e); err != nil {
 		respondWithError(w, http.StatusBadRequest, "Invalid request payload")
 		return
 	}
 	defer r.Body.Close()
 
-	if err := p.createProduct(a.DB); err != nil {
+	if err := e.createEvent(a.DB); err != nil {
 		respondWithError(w, http.StatusInternalServerError, err.Error())
 		return
 	}
 
-	respondWithJSON(w, http.StatusCreated, p)
+	respondWithJSON(w, http.StatusCreated, e)
 }
 
-func (a *App) updateProduct(w http.ResponseWriter, r *http.Request) {
+func (a *App) updateEvent(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
-	idNumber, err := strconv.Atoi(vars["id"])
+	idNum, err := strconv.Atoi(vars["id"])
 	if err != nil {
-		respondWithError(w, http.StatusBadRequest, "Invalid product ID")
+		respondWithError(w, http.StatusBadRequest, "Invalid event ID")
 		return
 	}
-	id := datastore.IDKey("Product", int64(idNumber), nil)
-	p := Product{ID: id}
+	var event Event
 	decoder := json.NewDecoder(r.Body)
-	if err := decoder.Decode(&p); err != nil {
+	if err := decoder.Decode(&event); err != nil {
 		respondWithError(w, http.StatusBadRequest, "Invalid request payload")
 		return
 	}
 	defer r.Body.Close()
-	// p.ID = id
 
-	if err := p.updateProduct(a.DB); err != nil {
+	if err := event.updateEvent(a.DB, idNum); err != nil {
 		respondWithError(w, http.StatusInternalServerError, err.Error())
 		return
 	}
 
-	respondWithJSON(w, http.StatusOK, p)
+	respondWithJSON(w, http.StatusOK, event)
 }
 
-func (a *App) deleteProduct(w http.ResponseWriter, r *http.Request) {
+func (a *App) deleteEvent(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
-	idNumber, err := strconv.Atoi(vars["id"])
+	idNum, err := strconv.Atoi(vars["id"])
 	if err != nil {
-		respondWithError(w, http.StatusBadRequest, "Invalid Product ID")
+		respondWithError(w, http.StatusBadRequest, "Invalid Event ID")
 		return
 	}
-	key := datastore.IDKey("Product", int64(idNumber), nil)
-	p := Product{ID: key}
-	if err := p.deleteProduct(a.DB); err != nil {
+	// key := datastore.IDKey("Event", int64(idNum), nil)
+	// e := Event{ID: key}
+	var event Event
+	if err := event.deleteEvent(a.DB, idNum); err != nil {
 		respondWithError(w, http.StatusInternalServerError, err.Error())
 		return
 	}
@@ -153,9 +142,10 @@ func (a *App) deleteProduct(w http.ResponseWriter, r *http.Request) {
 }
 
 func (a *App) initializeRoutes() {
-	a.Router.HandleFunc("/products", a.getProducts).Methods("GET")
-	a.Router.HandleFunc("/product", a.createProduct).Methods("POST")
-	a.Router.HandleFunc("/product/{id:[0-9]+}", a.getProduct).Methods("GET")
-	a.Router.HandleFunc("/product/{id:[0-9]+}", a.updateProduct).Methods("PUT")
-	a.Router.HandleFunc("/product/{id:[0-9]+}", a.deleteProduct).Methods("DELETE")
+	a.Router.HandleFunc("/events", a.getEvents).Methods("GET")
+	// a.Router.HandleFunc("/event/{id}", a.getEvent).Methods("GET")
+	a.Router.HandleFunc("/event", a.createEvent).Methods("POST")
+	a.Router.HandleFunc("/event/{id:[0-9]+}", a.getEvent).Methods("GET")
+	a.Router.HandleFunc("/event/{id:[0-9]+}", a.updateEvent).Methods("PUT")
+	a.Router.HandleFunc("/event/{id:[0-9]+}", a.deleteEvent).Methods("DELETE")
 }
