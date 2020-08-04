@@ -2,19 +2,10 @@ package main
 
 import (
 	"context"
-	"sort"
+	// "sort"
 
 	"cloud.google.com/go/datastore"
 )
-
-func (e *Event) createRegion(db *datastore.Client, region string) []string {
-
-	e.Regions = append(e.Regions, region)
-	sort.Strings(e.Regions)
-	// db.Put(context.Background(), e.ID, e)
-
-	return e.Regions
-}
 
 /*Schools**********************************************************/
 

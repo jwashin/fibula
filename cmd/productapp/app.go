@@ -37,12 +37,13 @@ func (a *App) Initialize() {
 	}
 	a.DB = client
 	a.initializeRoutes()
+
 }
 
 // Run runs the app
 func (a *App) Run(addr string) {
 
-	log.Fatal(http.ListenAndServe(":8010", a.Router))
+	log.Fatal(http.ListenAndServe(addr, a.Router))
 
 }
 

@@ -31,7 +31,7 @@ func clearTempEvents() {
 	// add one first just so all this doesn't fail
 	// addProducts(1)
 	client, _ := datastore.NewClient(ctx, "")
-	qry := datastore.NewQuery("Event").KeysOnly().Filter("InfoURL=", "http://hello.org").Filter("Title <", "Event9")
+	qry := datastore.NewQuery("Event").KeysOnly()
 	// var keylist []*datastore.Key
 	keys, err := client.GetAll(ctx, qry, nil)
 
@@ -55,7 +55,7 @@ func TestNoEvents(t *testing.T) {
 	response := executeRequest(req)
 	checkResponseCode(t, http.StatusOK, response.Code)
 
-	if body := response.Body.String(); body != "[]" {
+	if body := response.Body.String(); body != "null" {
 		t.Errorf("Expected an empty array. Got %s", body)
 	}
 }
@@ -89,10 +89,10 @@ func TestGetNonExistentEvent(t *testing.T) {
 }
 
 func TestCreateEvent(t *testing.T) {
-
+	// newID := makeXID()
 	clearTempEvents()
-
-	var jsonStr = []byte(`{"title":"Event702", "active": true}`)
+	newID := "dw91aj70"
+	var jsonStr = []byte(`{"title":"Event702", "id": "dw91aj70", "active": true}`)
 	req, _ := http.NewRequest("POST", "/event", bytes.NewBuffer(jsonStr))
 	req.Header.Set("Content-Type", "application/json")
 
@@ -107,7 +107,12 @@ func TestCreateEvent(t *testing.T) {
 	}
 
 	if m["active"] != true {
-		t.Errorf("Expected product Active to be true. Got '%v'", m["active"])
+		t.Errorf("Expected Active to be true. Got '%v'", m["active"])
+	}
+
+	if m["id"] != newID {
+		t.Errorf("Expected ID to be %v. Got '%v'", newID, m["id"])
+
 	}
 
 	// the id is compared to 1.0 because JSON unmarshaling converts numbers to
@@ -127,7 +132,23 @@ func TestGetEvent(t *testing.T) {
 	checkResponseCode(t, http.StatusOK, response.Code)
 }
 
-// main_test.go
+func TestGetEvents(t *testing.T) {
+	clearTempEvents()
+	addTempEvents(4)
+
+	req, _ := http.NewRequest("GET", "/events", nil)
+
+	response := executeRequest(req)
+	// fmt.Printf("%v", response.Body)
+	var m []map[string]interface{}
+	json.Unmarshal(response.Body.Bytes(), &m)
+
+	if len(m) != 4 {
+		t.Errorf("Expected %v events. Got %v", 4, len(m))
+	}
+
+	checkResponseCode(t, http.StatusOK, response.Code)
+}
 
 func addTempEvents(count int) {
 	if count < 1 {
@@ -141,8 +162,10 @@ func addTempEvents(count int) {
 	for i := 0; i < count; i++ {
 		idNum := i + 1
 		s := Event{Title: "Event" + strconv.Itoa(idNum), Active: true,
+			ID:      strconv.Itoa(idNum),
 			InfoURL: "http://hello.org"}
-		k := datastore.IDKey("Event", int64(idNum), nil)
+
+		k := datastore.NameKey("Event", strconv.Itoa(idNum), nil)
 		_, err := client.Put(ctx, k, &s)
 		if err != nil {
 			fmt.Printf("Could not add Event to database: %v ", err)
@@ -160,7 +183,7 @@ func TestUpdateEvent(t *testing.T) {
 	var originalEvent map[string]interface{}
 	json.Unmarshal(response.Body.Bytes(), &originalEvent)
 
-	var jsonStr = []byte(`{"organization":"happy nonprofit", "active":false, "regions":["A","B","C"]}`)
+	var jsonStr = []byte(`{"id":"1", "organization":"happy nonprofit", "active":false, "regions":["A","B","C"]}`)
 	req, _ = http.NewRequest("PUT", "/event/1", bytes.NewBuffer(jsonStr))
 	req.Header.Set("Content-Type", "application/json")
 
@@ -182,7 +205,7 @@ func TestUpdateEvent(t *testing.T) {
 	}
 
 	if m["active"] == originalEvent["active"] {
-		t.Errorf("Expected activity to change from '%v' to '%v'. Got '%v'", originalEvent["price"], m["price"], m["price"])
+		t.Errorf("Expected activity to change from '%v' to '%v'. Got '%v'", originalEvent["activity"], m["price"], m["price"])
 	}
 }
 

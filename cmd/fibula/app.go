@@ -4,14 +4,15 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
-	"strconv"
 
 	"cloud.google.com/go/datastore"
 	"github.com/gorilla/mux"
 )
 
-// App is the center of it all
+// App is the center of it all. It connects http routing with a database
+// in a REST configuration
 type App struct {
 	Router *mux.Router
 	DB     *datastore.Client
@@ -19,14 +20,6 @@ type App struct {
 
 // Initialize sets up the app
 func (a *App) Initialize() {
-	// connectionString :=
-	// 	// fmt.Sprintf("user=%s password=%s dbname=%s sslmode=disable", user, password, dbname)
-	// 	fmt.Sprintf("user=%s dbname=%s sslmode=disable", user, dbname)
-	// var err error
-	// a.DB, err = sql.Open("postgres", connectionString)
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
 
 	a.Router = mux.NewRouter()
 	c := context.Background()
@@ -39,21 +32,23 @@ func (a *App) Initialize() {
 }
 
 // Run runs the app
-func (a *App) Run(addr string) {}
+func (a *App) Run(addr string) {
+	log.Fatal(http.ListenAndServe(addr, a.Router))
+}
 
 func (a *App) getEvent(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 
-	idNum, err := strconv.Atoi(vars["id"])
+	idNum := vars["id"]
 	// key, err := datastore.DecodeKey(id)
 	// key := datastore.IDKey("Event", int64(idNum), nil)
-	if err != nil {
-		respondWithError(w, http.StatusNotFound, "Bad Key")
-	}
+	// if err != nil {
+	// 	respondWithError(w, http.StatusNotFound, "Bad Key")
+	// }
 	// event := Event{ID: key}
 	var event Event
 
-	if err = event.getEvent(a.DB, idNum); err != nil {
+	if err := event.getEvent(a.DB, idNum); err != nil {
 		respondWithError(w, http.StatusNotFound, "Event not found")
 		return
 	}
@@ -102,11 +97,11 @@ func (a *App) createEvent(w http.ResponseWriter, r *http.Request) {
 
 func (a *App) updateEvent(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
-	idNum, err := strconv.Atoi(vars["id"])
-	if err != nil {
-		respondWithError(w, http.StatusBadRequest, "Invalid event ID")
-		return
-	}
+	idNum := vars["id"]
+	// if err != nil {
+	// 	respondWithError(w, http.StatusBadRequest, "Invalid event ID")
+	// 	return
+	// }
 	var event Event
 	decoder := json.NewDecoder(r.Body)
 	if err := decoder.Decode(&event); err != nil {
@@ -125,13 +120,7 @@ func (a *App) updateEvent(w http.ResponseWriter, r *http.Request) {
 
 func (a *App) deleteEvent(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
-	idNum, err := strconv.Atoi(vars["id"])
-	if err != nil {
-		respondWithError(w, http.StatusBadRequest, "Invalid Event ID")
-		return
-	}
-	// key := datastore.IDKey("Event", int64(idNum), nil)
-	// e := Event{ID: key}
+	idNum := vars["id"]
 	var event Event
 	if err := event.deleteEvent(a.DB, idNum); err != nil {
 		respondWithError(w, http.StatusInternalServerError, err.Error())
