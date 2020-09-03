@@ -1,0 +1,806 @@
+{
+ "name": "2019 Regionals",
+ "regions": [
+  {
+   "name": "Blue Ridge Region",
+   "xid": "fa46ym49",
+   "schools": [
+    {
+     "name": "Auburn HS",
+     "xid": "md75ec42"
+    },
+    {
+     "name": "Bassett HS",
+     "xid": "rd71st91"
+    },
+    {
+     "name": "Bath County HS",
+     "xid": "yq35ra48"
+    },
+    {
+     "name": "Blacksburg HS",
+     "xid": "ef47za57"
+    },
+    {
+     "name": "Burton Center for Arts and Technology",
+     "xid": "vj01lc70"
+    },
+    {
+     "name": "Christiansburg HS",
+     "xid": "ro35tn53"
+    },
+    {
+     "name": "Floyd County HS",
+     "xid": "qa41vz71"
+    },
+    {
+     "name": "Franklin County HS",
+     "xid": "wc60ly32"
+    },
+    {
+     "name": "Glenvar HS",
+     "xid": "qs83ug64"
+    },
+    {
+     "name": "Magna Vista HS",
+     "xid": "xn36ah89"
+    },
+    {
+     "name": "Martinsville HS",
+     "xid": "lq27mf96"
+    },
+    {
+     "name": "Patrick Henry HS",
+     "xid": "pg74yz76",
+     "town": "Roanoke"
+    },
+    {
+     "name": "Salem HS",
+     "xid": "ls48pw24",
+     "town": "Salem"
+    },
+    {
+     "name": "William Fleming HS",
+     "xid": "op50vo54"
+    }
+   ]
+  },
+  {
+   "name": "Capital Region",
+   "xid": "as78no71",
+   "schools": [
+    {
+     "name": "Armstrong HS",
+     "xid": "yt94yk07"
+    },
+    {
+     "name": "Douglas S Freeman HS",
+     "xid": "dp34oc57"
+    },
+    {
+     "name": "Fluvanna County HS",
+     "xid": "id59lj53"
+    },
+    {
+     "name": "George Wythe HS",
+     "xid": "nt97ny91",
+     "town": "Richmond"
+    },
+    {
+     "name": "Glen Allen HS",
+     "xid": "uk56qu10"
+    },
+    {
+     "name": "Hermitage HS",
+     "xid": "ua67rc64"
+    },
+    {
+     "name": "Hermitage TC",
+     "xid": "vp37jr09"
+    },
+    {
+     "name": "Highland Springs HS",
+     "xid": "ym92ag43"
+    },
+    {
+     "name": "Huguenot HS",
+     "xid": "ax94zc62"
+    },
+    {
+     "name": "John Marshall HS",
+     "xid": "bz76hw19"
+    },
+    {
+     "name": "Middlesex HS",
+     "xid": "cj80gs10"
+    },
+    {
+     "name": "Mills E Godwin HS",
+     "xid": "jr01yz50"
+    },
+    {
+     "name": "New Kent HS",
+     "xid": "ol69st18"
+    },
+    {
+     "name": "Richmond Community HS",
+     "xid": "ph53fv58"
+    },
+    {
+     "name": "Thomas Jefferson HS",
+     "xid": "fa74ti20"
+    },
+    {
+     "name": "West Point HS",
+     "xid": "hv53on41"
+    }
+   ]
+  },
+  {
+   "name": "Colonial Region",
+   "xid": "yw40tz16",
+   "schools": [
+    {
+     "name": "Bruton HS",
+     "xid": "wm72mn80"
+    },
+    {
+     "name": "Gloucester HS",
+     "xid": "qf41tr76"
+    },
+    {
+     "name": "Grafton HS",
+     "xid": "ul14ig03"
+    },
+    {
+     "name": "Heritage HS",
+     "xid": "jl76lx12",
+     "town": "Newport News"
+    },
+    {
+     "name": "Jamestown HS",
+     "xid": "qy93kw76"
+    },
+    {
+     "name": "Kecoughtan HS",
+     "xid": "vs81ue43"
+    },
+    {
+     "name": "Lafayette HS",
+     "xid": "mq14by31"
+    },
+    {
+     "name": "Menchville HS",
+     "xid": "wx52uy72"
+    },
+    {
+     "name": "Southampton HS",
+     "xid": "cm61pt54"
+    },
+    {
+     "name": "Tabb HS",
+     "xid": "db98ms98"
+    },
+    {
+     "name": "Warwick HS",
+     "xid": "uz54fc85"
+    },
+    {
+     "name": "York HS",
+     "xid": "we74ju01"
+    }
+   ]
+  },
+  {
+   "name": "Germanna Region",
+   "xid": "le18jc01",
+   "schools": [
+    {
+     "name": "Battlefield HS",
+     "xid": "tg54gf03"
+    },
+    {
+     "name": "Brentsville District HS",
+     "xid": "tw32hr53"
+    },
+    {
+     "name": "C D Hylton HS",
+     "xid": "yh92kz02"
+    },
+    {
+     "name": "Chancellor HS",
+     "xid": "xf40iz78"
+    },
+    {
+     "name": "Charles Colgan Sr HS",
+     "xid": "hs76nx35"
+    },
+    {
+     "name": "Colonial Forge HS",
+     "xid": "lw08gf72"
+    },
+    {
+     "name": "Fauquier HS",
+     "xid": "zd74xq71"
+    },
+    {
+     "name": "Forest Park HS",
+     "xid": "cw42mc58"
+    },
+    {
+     "name": "Freedom HS",
+     "xid": "az96nk68",
+     "town": "Woodbridge"
+    },
+    {
+     "name": "Highland HS",
+     "xid": "os54wb45"
+    },
+    {
+     "name": "James Monroe HS",
+     "xid": "xd82zh10"
+    },
+    {
+     "name": "Kettle Run HS",
+     "xid": "zn04xh79"
+    },
+    {
+     "name": "Liberty HS",
+     "xid": "bi38zm52",
+     "town": "Bealeton"
+    },
+    {
+     "name": "Manassas Park HS",
+     "xid": "eq14tk60"
+    },
+    {
+     "name": "Massaponax HS",
+     "xid": "ps45cw46"
+    },
+    {
+     "name": "North Stafford HS",
+     "xid": "bv31ta49"
+    },
+    {
+     "name": "Osbourn HS",
+     "xid": "vw78iu26"
+    },
+    {
+     "name": "Patriot HS",
+     "xid": "en46zj54"
+    },
+    {
+     "name": "Potomac HS",
+     "xid": "rk92sf90"
+    },
+    {
+     "name": "Riverbend HS",
+     "xid": "ht21qe20"
+    },
+    {
+     "name": "Spotsylvania HS",
+     "xid": "jn84de23"
+    },
+    {
+     "name": "Stonewall Jackson HS",
+     "xid": "mg57sd79",
+     "town": "Manassas"
+    }
+   ]
+  },
+  {
+   "name": "Longwood Region",
+   "xid": "wl90po94",
+   "schools": [
+    {
+     "name": "Altavista HS",
+     "xid": "qc85ug68"
+    },
+    {
+     "name": "Amelia County HS",
+     "xid": "te64hq05"
+    },
+    {
+     "name": "Appomattox County HS",
+     "xid": "ap46qc64"
+    },
+    {
+     "name": "Bluestone HS",
+     "xid": "om25ic18"
+    },
+    {
+     "name": "Brunswick Senior HS",
+     "xid": "on97rp05"
+    },
+    {
+     "name": "Buckingham HS",
+     "xid": "ka60kv81"
+    },
+    {
+     "name": "Dan River HS",
+     "xid": "eb29ka28"
+    },
+    {
+     "name": "Gretna HS",
+     "xid": "pg95da90"
+    },
+    {
+     "name": "Nottoway HS",
+     "xid": "dk82qa01"
+    },
+    {
+     "name": "Parkview HS",
+     "xid": "to65sx08",
+     "town": "South Hills"
+    },
+    {
+     "name": "Powhatan HS",
+     "xid": "ei76kp40"
+    },
+    {
+     "name": "Prince Edward County HS",
+     "xid": "pd90tj15"
+    },
+    {
+     "name": "Randolph-Henry HS",
+     "xid": "pd61ui73"
+    },
+    {
+     "name": "Rockbridge County HS",
+     "xid": "lb89wo25"
+    },
+    {
+     "name": "Tunstall HS",
+     "xid": "mx63gf15"
+    }
+   ]
+  },
+  {
+   "name": "New River Region",
+   "xid": "kz78jc81",
+   "schools": [
+    {
+     "name": "Abingdon HS",
+     "xid": "qd15nz10"
+    },
+    {
+     "name": "Bland HS",
+     "xid": "pr61yn90"
+    },
+    {
+     "name": "Carroll County HS",
+     "xid": "vp59nl42"
+    },
+    {
+     "name": "Fort Chiswell HS",
+     "xid": "ec40xv38"
+    },
+    {
+     "name": "Galax HS",
+     "xid": "nx41np36"
+    },
+    {
+     "name": "George Wythe HS",
+     "xid": "zm95fp79",
+     "town": "Wytheville"
+    },
+    {
+     "name": "Giles HS",
+     "xid": "vk85ba46"
+    },
+    {
+     "name": "Graham HS",
+     "xid": "aj10dm83"
+    },
+    {
+     "name": "Grayson County CATE Center",
+     "xid": "ju98zr62"
+    },
+    {
+     "name": "Holston HS",
+     "xid": "lj90uf87"
+    },
+    {
+     "name": "John S Battle HS",
+     "xid": "kt72dv82"
+    },
+    {
+     "name": "Marion Senior HS",
+     "xid": "vk86wq02"
+    },
+    {
+     "name": "Narrows HS",
+     "xid": "tj34uz69"
+    },
+    {
+     "name": "Northwood HS",
+     "xid": "qu81xg85"
+    },
+    {
+     "name": "Richlands HS",
+     "xid": "fg70rd29"
+    },
+    {
+     "name": "Rural Retreat HS",
+     "xid": "uc06gz92"
+    },
+    {
+     "name": "Tazewell HS",
+     "xid": "er29fb01"
+    }
+   ]
+  },
+  {
+   "name": "Northern Virginia Region",
+   "xid": "hs15hq24",
+   "schools": [
+    {
+     "name": "Annandale HS",
+     "xid": "bj39dc09"
+    },
+    {
+     "name": "Centreville HS",
+     "xid": "jq98qh65"
+    },
+    {
+     "name": "Chantilly HS",
+     "xid": "vo18gu86"
+    },
+    {
+     "name": "Edison HS",
+     "xid": "wj58tl71"
+    },
+    {
+     "name": "Fairfax HS",
+     "xid": "yq98cp18"
+    },
+    {
+     "name": "Falls Church HS",
+     "xid": "ns59ib83"
+    },
+    {
+     "name": "George C Marshall HS",
+     "xid": "tq51ue43"
+    },
+    {
+     "name": "Hayfield Secondary",
+     "xid": "yl68fh31"
+    },
+    {
+     "name": "Herndon HS",
+     "xid": "rq81vp15"
+    },
+    {
+     "name": "James Madison HS",
+     "xid": "gp18cy35"
+    },
+    {
+     "name": "James W Robinson Jr Secondary",
+     "xid": "zo68bl75"
+    },
+    {
+     "name": "Lake Braddock Secondary School",
+     "xid": "yh91cd35"
+    },
+    {
+     "name": "Mount Vernon HS",
+     "xid": "xi49im59"
+    },
+    {
+     "name": "Oakton HS",
+     "xid": "wi73yq53"
+    },
+    {
+     "name": "Robert E Lee HS",
+     "xid": "xf18bi39",
+     "town": "Springfield"
+    },
+    {
+     "name": "South County Secondary",
+     "xid": "td31hd03"
+    },
+    {
+     "name": "South Lakes HS",
+     "xid": "lz43qs37"
+    },
+    {
+     "name": "T C Williams HS",
+     "xid": "al03lw63"
+    },
+    {
+     "name": "W T Woodson HS",
+     "xid": "xz53bv23"
+    },
+    {
+     "name": "Westfield HS",
+     "xid": "vo52jx52"
+    },
+    {
+     "name": "Yorktown Senior HS",
+     "xid": "bp79dc72",
+     "town": "Arlington"
+    }
+   ]
+  },
+  {
+   "name": "Shenandoah Region",
+   "xid": "ve91em62",
+   "schools": [
+    {
+     "name": "Briar Woods HS",
+     "xid": "ci18tv06"
+    },
+    {
+     "name": "Broad Run HS",
+     "xid": "oi31pt20"
+    },
+    {
+     "name": "Fort Defiance HS",
+     "xid": "vq64ha73"
+    },
+    {
+     "name": "Freedom HS",
+     "xid": "km39qn40",
+     "town": "South Riding"
+    },
+    {
+     "name": "Heritage HS",
+     "xid": "fr63ft83",
+     "town": "Leesburg"
+    },
+    {
+     "name": "James Wood HS",
+     "xid": "vn43fw63"
+    },
+    {
+     "name": "John Handley HS",
+     "xid": "yq54ev50"
+    },
+    {
+     "name": "Loudoun County HS",
+     "xid": "rn38tb31"
+    },
+    {
+     "name": "Millbrook HS",
+     "xid": "tn02bw21"
+    },
+    {
+     "name": "Page County HS",
+     "xid": "qs26tq91"
+    },
+    {
+     "name": "Riverside HS",
+     "xid": "ch41mt47"
+    },
+    {
+     "name": "Robert E Lee HS",
+     "xid": "dw12bd26",
+     "town": "Staunton"
+    },
+    {
+     "name": "Rock Ridge HS",
+     "xid": "ks80uz19"
+    },
+    {
+     "name": "Sherando HS",
+     "xid": "qu21mo86"
+    },
+    {
+     "name": "Skyline HS",
+     "xid": "fr82zn80"
+    },
+    {
+     "name": "Spotswood HS",
+     "xid": "pk59on13"
+    },
+    {
+     "name": "Turner Ashby HS",
+     "xid": "lt83ux21"
+    },
+    {
+     "name": "William Monroe HS",
+     "xid": "xe68sb53"
+    }
+   ]
+  },
+  {
+   "name": "Tidewater Region",
+   "xid": "hp27jd28",
+   "schools": [
+    {
+     "name": "Advanced Technology Center",
+     "xid": "qc29ch63"
+    },
+    {
+     "name": "Arcadia HS",
+     "xid": "hd49wb28"
+    },
+    {
+     "name": "B T Washington HS",
+     "xid": "dk85je21"
+    },
+    {
+     "name": "Bayside HS",
+     "xid": "nx71en74"
+    },
+    {
+     "name": "Deep Creek HS",
+     "xid": "my97kt73"
+    },
+    {
+     "name": "First Colonial HS",
+     "xid": "el31sz35"
+    },
+    {
+     "name": "Floyd E Kellam HS",
+     "xid": "qd16od49"
+    },
+    {
+     "name": "Frank Cox HS",
+     "xid": "zi19xz26"
+    },
+    {
+     "name": "Franklin HS",
+     "xid": "cj24le62"
+    },
+    {
+     "name": "Granby HS",
+     "xid": "yt58ah98"
+    },
+    {
+     "name": "Great Bridge HS",
+     "xid": "ao08rq80"
+    },
+    {
+     "name": "Indian River HS",
+     "xid": "mj64nj49"
+    },
+    {
+     "name": "Kempsville HS",
+     "xid": "bw13tg64"
+    },
+    {
+     "name": "King's Fork HS",
+     "xid": "aj87tb30"
+    },
+    {
+     "name": "Landstown HS",
+     "xid": "qu46kz92"
+    },
+    {
+     "name": "Nandua HS",
+     "xid": "ko81wd97"
+    },
+    {
+     "name": "Nansemond River HS",
+     "xid": "ha37xp95"
+    },
+    {
+     "name": "Norfolk Christian HS",
+     "xid": "sk60ed31"
+    },
+    {
+     "name": "Norfolk Technical Vocational Center",
+     "xid": "iv06qv52"
+    },
+    {
+     "name": "Princess Anne HS",
+     "xid": "it79nm90"
+    },
+    {
+     "name": "Tallwood HS",
+     "xid": "ex48gd34"
+    },
+    {
+     "name": "Virginia Beach Technical and Career Education Center",
+     "xid": "fv20tg23"
+    },
+    {
+     "name": "Western Branch HS",
+     "xid": "wp85zp09"
+    }
+   ]
+  },
+  {
+   "name": "Tri-Cities Region",
+   "xid": "wn53cu74",
+   "schools": [
+    {
+     "name": "Chesterfield TC",
+     "xid": "at17fo71"
+    },
+    {
+     "name": "Colonial Heights HS",
+     "xid": "cd71ot31"
+    },
+    {
+     "name": "Dinwiddie Senior HS",
+     "xid": "ui05hf58"
+    },
+    {
+     "name": "Hopewell HS",
+     "xid": "vd13pu63"
+    },
+    {
+     "name": "James River HS",
+     "xid": "wr54ez91"
+    },
+    {
+     "name": "Midlothian HS",
+     "xid": "to31ob43"
+    },
+    {
+     "name": "Prince George HS",
+     "xid": "vw54qz25"
+    },
+    {
+     "name": "Surry County HS",
+     "xid": "ct35wl25"
+    }
+   ]
+  },
+  {
+   "name": "UVA’s College at Wise Region",
+   "xid": "id31iu19",
+   "schools": [
+    {
+     "name": "Castlewood HS",
+     "xid": "qy96ok09"
+    },
+    {
+     "name": "Central HS",
+     "xid": "hb65lc59",
+     "town": "Norton"
+    },
+    {
+     "name": "Council HS",
+     "xid": "zd01th23"
+    },
+    {
+     "name": "Eastside HS",
+     "xid": "qa50xe14"
+    },
+    {
+     "name": "Grundy HS",
+     "xid": "ib10sd23"
+    },
+    {
+     "name": "Honaker HS",
+     "xid": "vm32fj31"
+    },
+    {
+     "name": "Hurley HS",
+     "xid": "nz30uv20"
+    },
+    {
+     "name": "Lebanon HS",
+     "xid": "wl40kt46"
+    },
+    {
+     "name": "Lee County Vocational Technical Center",
+     "xid": "ec61yn49"
+    },
+    {
+     "name": "Ridgeview HS",
+     "xid": "yo75eg16"
+    },
+    {
+     "name": "Thomas Walker HS",
+     "xid": "mu31pj92"
+    },
+    {
+     "name": "Twin Valley HS",
+     "xid": "jl39vj27"
+    },
+    {
+     "name": "Union HS",
+     "xid": "zj61fd80"
+    },
+    {
+     "name": "Virginia HS",
+     "xid": "vy31vk83"
+    }
+   ]
+  }
+ ]
+}

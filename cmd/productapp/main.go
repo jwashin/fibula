@@ -1,6 +1,6 @@
 // main.go
 
-package main
+package productapp
 
 func main() {
 	a := App{}

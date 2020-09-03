@@ -1,95 +1,95 @@
 package main
 
-import (
-	"context"
-	// "sort"
+// "sort"
 
-	"cloud.google.com/go/datastore"
-)
+// We've gone cqrs, so we make a fat client, and record changes to the
+// hierarchy on the server, rebuilding the whole set if it changes, and sending
+// the whole set to the client, state->regions->schools (it ain't much) if
+// the info is requested. as a protocol buffer ([]byte) it's not too big.
 
 /*Schools**********************************************************/
 
-// School has the basic info about a School
-type School struct {
-	ID     *datastore.Key `json:"id" datastore:"__key__"`
-	Name   string         `json:"name"`
-	Region string         `json:"region"`
-	Town   string         `json:"town"`
-	Active bool           `json:"active"`
-	Event  *datastore.Key
-}
+// // School has the basic info about a School
+// type School struct {
+// 	ID     *datastore.Key `json:"id" datastore:"__key__"`
+// 	Name   string         `json:"name"`
+// 	Region string         `json:"region"`
+// 	Town   string         `json:"town"`
+// 	Active bool           `json:"active"`
+// 	Event  *datastore.Key
+// }
 
-func getSchool(db *datastore.Client, key *datastore.Key) (*School, error) {
-	context := context.Background()
-	var s School
+// func getSchool(db *datastore.Client, key *datastore.Key) (*School, error) {
+// 	context := context.Background()
+// 	var s School
 
-	// productKey := datastore.NameKey("School", s.ID, nil)
-	err := db.Get(context, key, s)
-	// t, err := json.Marshal(p)
-	// fmt.Printf("this error is from Get: %v", err)
-	if err != nil {
-		return nil, err
-	}
-	return &s, nil
-}
+// 	// productKey := datastore.NameKey("School", s.ID, nil)
+// 	err := db.Get(context, key, s)
+// 	// t, err := json.Marshal(p)
+// 	// fmt.Printf("this error is from Get: %v", err)
+// 	if err != nil {
+// 		return nil, err
+// 	}
+// 	return &s, nil
+// }
 
-func (s *School) updateSchool(db *datastore.Client) error {
-	context := context.Background()
-	if s.ID != nil {
-		productKey := s.ID
-		_, err := db.Put(context, productKey, s)
-		if err != nil {
-			return err
-		}
-	}
-	return nil
+// func (s *School) updateSchool(db *datastore.Client) error {
+// 	context := context.Background()
+// 	if s.ID != nil {
+// 		productKey := s.ID
+// 		_, err := db.Put(context, productKey, s)
+// 		if err != nil {
+// 			return err
+// 		}
+// 	}
+// 	return nil
 
-}
+// }
 
-func (s *School) deleteSchool(db *datastore.Client) error {
-	context := context.Background()
+// func (s *School) deleteSchool(db *datastore.Client) error {
+// 	context := context.Background()
 
-	productKey := s.ID
-	err := db.Delete(context, productKey)
-	if err != nil {
-		return err
+// 	productKey := s.ID
+// 	err := db.Delete(context, productKey)
+// 	if err != nil {
+// 		return err
 
-	}
-	return nil
-}
+// 	}
+// 	return nil
+// }
 
-func (s *School) createSchool(db *datastore.Client) error {
-	context := context.Background()
-	schoolKey := datastore.IncompleteKey("School", nil)
-	_, err := db.Put(context, schoolKey, s)
-	if err != nil {
-		return err
-	}
-	return nil
+// func (s *School) createSchool(db *datastore.Client) error {
+// 	context := context.Background()
+// 	schoolKey := datastore.IncompleteKey("School", nil)
+// 	_, err := db.Put(context, schoolKey, s)
+// 	if err != nil {
+// 		return err
+// 	}
+// 	return nil
 
-}
+// }
 
-func getSchools(db *datastore.Client, event *datastore.Key, region string, active bool) ([]School, error) {
+// func getSchools(db *datastore.Client, event *datastore.Key, region string, active bool) ([]School, error) {
 
-	context := context.Background()
-	query := datastore.NewQuery("School")
-	if event != nil {
-		query.Filter("Event=", event)
-	}
-	if region != "" {
-		query.Filter("Region=", region)
-	}
-	if active != false {
-		query.Filter("Active=", active)
-	}
-	var schools []School
-	_, err := db.GetAll(context, query, schools)
+// 	context := context.Background()
+// 	query := datastore.NewQuery("School")
+// 	if event != nil {
+// 		query.Filter("Event=", event)
+// 	}
+// 	if region != "" {
+// 		query.Filter("Region=", region)
+// 	}
+// 	if active != false {
+// 		query.Filter("Active=", active)
+// 	}
+// 	var schools []School
+// 	_, err := db.GetAll(context, query, schools)
 
-	if err != nil {
-		if err == datastore.ErrInvalidEntityType {
-			// we got "invalid entity type". return empty list
-			return []School{}, nil
-		}
-	}
-	return schools, err
-}
+// 	if err != nil {
+// 		if err == datastore.ErrInvalidEntityType {
+// 			// we got "invalid entity type". return empty list
+// 			return []School{}, nil
+// 		}
+// 	}
+// 	return schools, err
+// }

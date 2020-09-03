@@ -1,0 +1,51 @@
+syntax = "proto3";
+// package main;
+
+// import "google/protobuf/oneof.proto";
+
+// option go_package = "github.com/protocolbuffers/protobuf/examples/go/tutorialpb";
+option go_package = ".;main";
+
+message RegionEvent{
+  string id = 1;  // Unique ID for the object.
+
+    Registered registered = 2;
+    Renamed renamed = 3;
+    Activated activated = 4;
+    Deactivated deactivated = 5;
+
+}
+
+message SchoolEvent{
+  string id = 1;  // Unique ID for the object.
+
+    Registered registered = 2;
+    Renamed renamed = 3;
+    Activated activated = 4;
+    Deactivated deactivated = 5;
+    Placed placed = 6;
+
+}
+
+message Registered {
+    string name = 1;
+    string parent = 2;
+  }
+
+message Renamed {
+    string name = 1;
+  }
+
+  //   activate
+message Activated {
+  }
+
+  //   deactivate
+message Deactivated {
+  }
+
+//   if we need a place name to further specify a school
+message Placed {
+    string town = 2;
+  }
+

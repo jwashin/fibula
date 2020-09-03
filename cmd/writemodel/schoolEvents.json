@@ -1,0 +1,1352 @@
+[
+	{
+		"id": "dh41dx97",
+		"registered": {
+			"name": "Auburn HS",
+			"parent": "ab17bx81"
+		}
+	},
+	{
+		"id": "by14wc86",
+		"registered": {
+			"name": "Bassett HS",
+			"parent": "ab17bx81"
+		}
+	},
+	{
+		"id": "ml67bc74",
+		"registered": {
+			"name": "Bath County HS",
+			"parent": "ab17bx81"
+		}
+	},
+	{
+		"id": "fl02kr92",
+		"registered": {
+			"name": "Blacksburg HS",
+			"parent": "ab17bx81"
+		}
+	},
+	{
+		"id": "pq14lj64",
+		"registered": {
+			"name": "Burton Center for Arts and Technology",
+			"parent": "ab17bx81"
+		}
+	},
+	{
+		"id": "qc59hx27",
+		"registered": {
+			"name": "Christiansburg HS",
+			"parent": "ab17bx81"
+		}
+	},
+	{
+		"id": "zr76nf41",
+		"registered": {
+			"name": "Floyd County HS",
+			"parent": "ab17bx81"
+		}
+	},
+	{
+		"id": "mi15bc56",
+		"registered": {
+			"name": "Franklin County HS",
+			"parent": "ab17bx81"
+		}
+	},
+	{
+		"id": "rv13se62",
+		"registered": {
+			"name": "Glenvar HS",
+			"parent": "ab17bx81"
+		}
+	},
+	{
+		"id": "bw41fv03",
+		"registered": {
+			"name": "Magna Vista HS",
+			"parent": "ab17bx81"
+		}
+	},
+	{
+		"id": "an70ok97",
+		"registered": {
+			"name": "Martinsville HS",
+			"parent": "ab17bx81"
+		}
+	},
+	{
+		"id": "fo61iz16",
+		"registered": {
+			"name": "Patrick Henry HS",
+			"parent": "ab17bx81"
+		}
+	},
+	{
+		"id": "fo61iz16",
+		"placed": {
+			"town": "Roanoke"
+		}
+	},
+	{
+		"id": "eb83ln01",
+		"registered": {
+			"name": "Salem HS",
+			"parent": "ab17bx81"
+		}
+	},
+	{
+		"id": "eb83ln01",
+		"placed": {
+			"town": "Salem"
+		}
+	},
+	{
+		"id": "jb05gb95",
+		"registered": {
+			"name": "William Fleming HS",
+			"parent": "ab17bx81"
+		}
+	},
+	{
+		"id": "yg75ep43",
+		"registered": {
+			"name": "Armstrong HS",
+			"parent": "ei32oz39"
+		}
+	},
+	{
+		"id": "jo93dy74",
+		"registered": {
+			"name": "Douglas S Freeman HS",
+			"parent": "ei32oz39"
+		}
+	},
+	{
+		"id": "jh71ol60",
+		"registered": {
+			"name": "Fluvanna County HS",
+			"parent": "ei32oz39"
+		}
+	},
+	{
+		"id": "gh47mh04",
+		"registered": {
+			"name": "George Wythe HS",
+			"parent": "ei32oz39"
+		}
+	},
+	{
+		"id": "gh47mh04",
+		"placed": {
+			"town": "Richmond"
+		}
+	},
+	{
+		"id": "ca37eb13",
+		"registered": {
+			"name": "Glen Allen HS",
+			"parent": "ei32oz39"
+		}
+	},
+	{
+		"id": "kw14li42",
+		"registered": {
+			"name": "Hermitage HS",
+			"parent": "ei32oz39"
+		}
+	},
+	{
+		"id": "fv73mr35",
+		"registered": {
+			"name": "Hermitage TC",
+			"parent": "ei32oz39"
+		}
+	},
+	{
+		"id": "ta24wt15",
+		"registered": {
+			"name": "Highland Springs HS",
+			"parent": "ei32oz39"
+		}
+	},
+	{
+		"id": "ne53in36",
+		"registered": {
+			"name": "Huguenot HS",
+			"parent": "ei32oz39"
+		}
+	},
+	{
+		"id": "zl54gf27",
+		"registered": {
+			"name": "John Marshall HS",
+			"parent": "ei32oz39"
+		}
+	},
+	{
+		"id": "ga18bm10",
+		"registered": {
+			"name": "Middlesex HS",
+			"parent": "ei32oz39"
+		}
+	},
+	{
+		"id": "ud50kj91",
+		"registered": {
+			"name": "Mills E Godwin HS",
+			"parent": "ei32oz39"
+		}
+	},
+	{
+		"id": "tn70ib42",
+		"registered": {
+			"name": "New Kent HS",
+			"parent": "ei32oz39"
+		}
+	},
+	{
+		"id": "bs03aq15",
+		"registered": {
+			"name": "Richmond Community HS",
+			"parent": "ei32oz39"
+		}
+	},
+	{
+		"id": "sq98cu65",
+		"registered": {
+			"name": "Thomas Jefferson HS",
+			"parent": "ei32oz39"
+		}
+	},
+	{
+		"id": "os23ns54",
+		"registered": {
+			"name": "West Point HS",
+			"parent": "ei32oz39"
+		}
+	},
+	{
+		"id": "si65gr09",
+		"registered": {
+			"name": "Bruton HS",
+			"parent": "ry91zy80"
+		}
+	},
+	{
+		"id": "vz18fk75",
+		"registered": {
+			"name": "Gloucester HS",
+			"parent": "ry91zy80"
+		}
+	},
+	{
+		"id": "tb41lg65",
+		"registered": {
+			"name": "Grafton HS",
+			"parent": "ry91zy80"
+		}
+	},
+	{
+		"id": "hx93wv82",
+		"registered": {
+			"name": "Heritage HS",
+			"parent": "ry91zy80"
+		}
+	},
+	{
+		"id": "hx93wv82",
+		"placed": {
+			"town": "Newport News"
+		}
+	},
+	{
+		"id": "dm76zu82",
+		"registered": {
+			"name": "Jamestown HS",
+			"parent": "ry91zy80"
+		}
+	},
+	{
+		"id": "sm23cj46",
+		"registered": {
+			"name": "Kecoughtan HS",
+			"parent": "ry91zy80"
+		}
+	},
+	{
+		"id": "sc82lv13",
+		"registered": {
+			"name": "Lafayette HS",
+			"parent": "ry91zy80"
+		}
+	},
+	{
+		"id": "bf46ib43",
+		"registered": {
+			"name": "Menchville HS",
+			"parent": "ry91zy80"
+		}
+	},
+	{
+		"id": "zj30ea68",
+		"registered": {
+			"name": "Southampton HS",
+			"parent": "ry91zy80"
+		}
+	},
+	{
+		"id": "ut87am85",
+		"registered": {
+			"name": "Tabb HS",
+			"parent": "ry91zy80"
+		}
+	},
+	{
+		"id": "vh80rz81",
+		"registered": {
+			"name": "Warwick HS",
+			"parent": "ry91zy80"
+		}
+	},
+	{
+		"id": "pi82fc47",
+		"registered": {
+			"name": "York HS",
+			"parent": "ry91zy80"
+		}
+	},
+	{
+		"id": "lt60sm16",
+		"registered": {
+			"name": "Battlefield HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "sf61lm04",
+		"registered": {
+			"name": "Brentsville District HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "ai76td15",
+		"registered": {
+			"name": "C D Hylton HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "mh42ol76",
+		"registered": {
+			"name": "Chancellor HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "zo80kb39",
+		"registered": {
+			"name": "Charles Colgan Sr HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "og67tr37",
+		"registered": {
+			"name": "Colonial Forge HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "zs23lc93",
+		"registered": {
+			"name": "Fauquier HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "ag39sb07",
+		"registered": {
+			"name": "Forest Park HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "mr73vy75",
+		"registered": {
+			"name": "Freedom HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "mr73vy75",
+		"placed": {
+			"town": "Woodbridge"
+		}
+	},
+	{
+		"id": "he13td83",
+		"registered": {
+			"name": "Highland HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "fr65ag75",
+		"registered": {
+			"name": "James Monroe HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "cq65gt52",
+		"registered": {
+			"name": "Kettle Run HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "mz28mq69",
+		"registered": {
+			"name": "Liberty HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "mz28mq69",
+		"placed": {
+			"town": "Bealeton"
+		}
+	},
+	{
+		"id": "sa95at91",
+		"registered": {
+			"name": "Manassas Park HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "rk78mc41",
+		"registered": {
+			"name": "Massaponax HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "ju93nb10",
+		"registered": {
+			"name": "North Stafford HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "vh21ea10",
+		"registered": {
+			"name": "Osbourn HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "tx21nh12",
+		"registered": {
+			"name": "Patriot HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "ky71wr30",
+		"registered": {
+			"name": "Potomac HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "yp54us36",
+		"registered": {
+			"name": "Riverbend HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "gt78go48",
+		"registered": {
+			"name": "Spotsylvania HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "ae94mv69",
+		"registered": {
+			"name": "Stonewall Jackson HS",
+			"parent": "hm34fe90"
+		}
+	},
+	{
+		"id": "ae94mv69",
+		"placed": {
+			"town": "Manassas"
+		}
+	},
+	{
+		"id": "zn71lu06",
+		"registered": {
+			"name": "Altavista HS",
+			"parent": "ia07ts70"
+		}
+	},
+	{
+		"id": "mf02dp72",
+		"registered": {
+			"name": "Amelia County HS",
+			"parent": "ia07ts70"
+		}
+	},
+	{
+		"id": "ev23oi48",
+		"registered": {
+			"name": "Appomattox County HS",
+			"parent": "ia07ts70"
+		}
+	},
+	{
+		"id": "lr74is35",
+		"registered": {
+			"name": "Bluestone HS",
+			"parent": "ia07ts70"
+		}
+	},
+	{
+		"id": "kl79iu89",
+		"registered": {
+			"name": "Brunswick Senior HS",
+			"parent": "ia07ts70"
+		}
+	},
+	{
+		"id": "ey76tc43",
+		"registered": {
+			"name": "Buckingham HS",
+			"parent": "ia07ts70"
+		}
+	},
+	{
+		"id": "oy87hc69",
+		"registered": {
+			"name": "Dan River HS",
+			"parent": "ia07ts70"
+		}
+	},
+	{
+		"id": "az52ba26",
+		"registered": {
+			"name": "Gretna HS",
+			"parent": "ia07ts70"
+		}
+	},
+	{
+		"id": "sz28zv21",
+		"registered": {
+			"name": "Nottoway HS",
+			"parent": "ia07ts70"
+		}
+	},
+	{
+		"id": "sf17fc65",
+		"registered": {
+			"name": "Parkview HS",
+			"parent": "ia07ts70"
+		}
+	},
+	{
+		"id": "sf17fc65",
+		"placed": {
+			"town": "South Hills"
+		}
+	},
+	{
+		"id": "jd92pj25",
+		"registered": {
+			"name": "Powhatan HS",
+			"parent": "ia07ts70"
+		}
+	},
+	{
+		"id": "kp40co73",
+		"registered": {
+			"name": "Prince Edward County HS",
+			"parent": "ia07ts70"
+		}
+	},
+	{
+		"id": "bg61dm23",
+		"registered": {
+			"name": "Randolph-Henry HS",
+			"parent": "ia07ts70"
+		}
+	},
+	{
+		"id": "ys41cv37",
+		"registered": {
+			"name": "Rockbridge County HS",
+			"parent": "ia07ts70"
+		}
+	},
+	{
+		"id": "xm60ry39",
+		"registered": {
+			"name": "Tunstall HS",
+			"parent": "ia07ts70"
+		}
+	},
+	{
+		"id": "qh91jn05",
+		"registered": {
+			"name": "Abingdon HS",
+			"parent": "ct50th38"
+		}
+	},
+	{
+		"id": "vj95ad28",
+		"registered": {
+			"name": "Bland HS",
+			"parent": "ct50th38"
+		}
+	},
+	{
+		"id": "qc92qz87",
+		"registered": {
+			"name": "Carroll County HS",
+			"parent": "ct50th38"
+		}
+	},
+	{
+		"id": "qb67zu38",
+		"registered": {
+			"name": "Fort Chiswell HS",
+			"parent": "ct50th38"
+		}
+	},
+	{
+		"id": "sw79tv36",
+		"registered": {
+			"name": "Galax HS",
+			"parent": "ct50th38"
+		}
+	},
+	{
+		"id": "hc30qa34",
+		"registered": {
+			"name": "George Wythe HS",
+			"parent": "ct50th38"
+		}
+	},
+	{
+		"id": "hc30qa34",
+		"placed": {
+			"town": "Wytheville"
+		}
+	},
+	{
+		"id": "ib07wb46",
+		"registered": {
+			"name": "Giles HS",
+			"parent": "ct50th38"
+		}
+	},
+	{
+		"id": "rh64bn12",
+		"registered": {
+			"name": "Graham HS",
+			"parent": "ct50th38"
+		}
+	},
+	{
+		"id": "yu12sc14",
+		"registered": {
+			"name": "Grayson County CATE Center",
+			"parent": "ct50th38"
+		}
+	},
+	{
+		"id": "gs41ze34",
+		"registered": {
+			"name": "Holston HS",
+			"parent": "ct50th38"
+		}
+	},
+	{
+		"id": "ic06tf92",
+		"registered": {
+			"name": "John S Battle HS",
+			"parent": "ct50th38"
+		}
+	},
+	{
+		"id": "pn86kt03",
+		"registered": {
+			"name": "Marion Senior HS",
+			"parent": "ct50th38"
+		}
+	},
+	{
+		"id": "th12ed02",
+		"registered": {
+			"name": "Narrows HS",
+			"parent": "ct50th38"
+		}
+	},
+	{
+		"id": "bs07rc20",
+		"registered": {
+			"name": "Northwood HS",
+			"parent": "ct50th38"
+		}
+	},
+	{
+		"id": "ae58qw03",
+		"registered": {
+			"name": "Richlands HS",
+			"parent": "ct50th38"
+		}
+	},
+	{
+		"id": "wb85ar20",
+		"registered": {
+			"name": "Rural Retreat HS",
+			"parent": "ct50th38"
+		}
+	},
+	{
+		"id": "us73rf89",
+		"registered": {
+			"name": "Tazewell HS",
+			"parent": "ct50th38"
+		}
+	},
+	{
+		"id": "un91eh69",
+		"registered": {
+			"name": "Annandale HS",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "po02cw76",
+		"registered": {
+			"name": "Centreville HS",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "ks12ez01",
+		"registered": {
+			"name": "Chantilly HS",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "qs32ho59",
+		"registered": {
+			"name": "Edison HS",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "hw21dl01",
+		"registered": {
+			"name": "Fairfax HS",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "km87vu73",
+		"registered": {
+			"name": "Falls Church HS",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "bf84xz95",
+		"registered": {
+			"name": "George C Marshall HS",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "ym91lo42",
+		"registered": {
+			"name": "Hayfield Secondary",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "zl20ro71",
+		"registered": {
+			"name": "Herndon HS",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "hf23nw13",
+		"registered": {
+			"name": "James Madison HS",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "pr76pi04",
+		"registered": {
+			"name": "James W Robinson Jr Secondary",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "az47th95",
+		"registered": {
+			"name": "Lake Braddock Secondary School",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "iy41lh28",
+		"registered": {
+			"name": "Mount Vernon HS",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "ls37vk65",
+		"registered": {
+			"name": "Oakton HS",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "xg98kt13",
+		"registered": {
+			"name": "Robert E Lee HS",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "xg98kt13",
+		"placed": {
+			"town": "Springfield"
+		}
+	},
+	{
+		"id": "wv70op50",
+		"registered": {
+			"name": "South County Secondary",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "xs03hp20",
+		"registered": {
+			"name": "South Lakes HS",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "rj40wu15",
+		"registered": {
+			"name": "T C Williams HS",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "wi56jw40",
+		"registered": {
+			"name": "W T Woodson HS",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "oi19dh81",
+		"registered": {
+			"name": "Westfield HS",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "wc04sw43",
+		"registered": {
+			"name": "Yorktown Senior HS",
+			"parent": "sm10nj12"
+		}
+	},
+	{
+		"id": "wc04sw43",
+		"placed": {
+			"town": "Arlington"
+		}
+	},
+	{
+		"id": "gx15ot14",
+		"registered": {
+			"name": "Briar Woods HS",
+			"parent": "ds98ep47"
+		}
+	},
+	{
+		"id": "zp83pw21",
+		"registered": {
+			"name": "Broad Run HS",
+			"parent": "ds98ep47"
+		}
+	},
+	{
+		"id": "em41zu04",
+		"registered": {
+			"name": "Fort Defiance HS",
+			"parent": "ds98ep47"
+		}
+	},
+	{
+		"id": "ot29vu42",
+		"registered": {
+			"name": "Freedom HS",
+			"parent": "ds98ep47"
+		}
+	},
+	{
+		"id": "ot29vu42",
+		"placed": {
+			"town": "South Riding"
+		}
+	},
+	{
+		"id": "ov10qp46",
+		"registered": {
+			"name": "Heritage HS",
+			"parent": "ds98ep47"
+		}
+	},
+	{
+		"id": "ov10qp46",
+		"placed": {
+			"town": "Leesburg"
+		}
+	},
+	{
+		"id": "yi29gd78",
+		"registered": {
+			"name": "James Wood HS",
+			"parent": "ds98ep47"
+		}
+	},
+	{
+		"id": "hv86ub56",
+		"registered": {
+			"name": "John Handley HS",
+			"parent": "ds98ep47"
+		}
+	},
+	{
+		"id": "nt91va17",
+		"registered": {
+			"name": "Loudoun County HS",
+			"parent": "ds98ep47"
+		}
+	},
+	{
+		"id": "ud84xt73",
+		"registered": {
+			"name": "Millbrook HS",
+			"parent": "ds98ep47"
+		}
+	},
+	{
+		"id": "jo42xe39",
+		"registered": {
+			"name": "Page County HS",
+			"parent": "ds98ep47"
+		}
+	},
+	{
+		"id": "gx20zk53",
+		"registered": {
+			"name": "Riverside HS",
+			"parent": "ds98ep47"
+		}
+	},
+	{
+		"id": "kr96di75",
+		"registered": {
+			"name": "Robert E Lee HS",
+			"parent": "ds98ep47"
+		}
+	},
+	{
+		"id": "kr96di75",
+		"placed": {
+			"town": "Staunton"
+		}
+	},
+	{
+		"id": "yp37bc65",
+		"registered": {
+			"name": "Rock Ridge HS",
+			"parent": "ds98ep47"
+		}
+	},
+	{
+		"id": "mt56dy51",
+		"registered": {
+			"name": "Sherando HS",
+			"parent": "ds98ep47"
+		}
+	},
+	{
+		"id": "lk01hx28",
+		"registered": {
+			"name": "Skyline HS",
+			"parent": "ds98ep47"
+		}
+	},
+	{
+		"id": "nm64jy13",
+		"registered": {
+			"name": "Spotswood HS",
+			"parent": "ds98ep47"
+		}
+	},
+	{
+		"id": "qj18rw68",
+		"registered": {
+			"name": "Turner Ashby HS",
+			"parent": "ds98ep47"
+		}
+	},
+	{
+		"id": "xg26bo74",
+		"registered": {
+			"name": "William Monroe HS",
+			"parent": "ds98ep47"
+		}
+	},
+	{
+		"id": "lb24sf51",
+		"registered": {
+			"name": "Advanced Technology Center",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "vc53vq12",
+		"registered": {
+			"name": "Arcadia HS",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "ge25ku94",
+		"registered": {
+			"name": "B T Washington HS",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "ak80zt93",
+		"registered": {
+			"name": "Bayside HS",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "tn07ue47",
+		"registered": {
+			"name": "Deep Creek HS",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "tp12sv24",
+		"registered": {
+			"name": "First Colonial HS",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "tu35js56",
+		"registered": {
+			"name": "Floyd E Kellam HS",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "xn03vo94",
+		"registered": {
+			"name": "Frank Cox HS",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "gq16at64",
+		"registered": {
+			"name": "Franklin HS",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "ok70nl04",
+		"registered": {
+			"name": "Granby HS",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "fd53co06",
+		"registered": {
+			"name": "Great Bridge HS",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "wm69km17",
+		"registered": {
+			"name": "Indian River HS",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "yw71kq79",
+		"registered": {
+			"name": "Kempsville HS",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "rk82qw57",
+		"registered": {
+			"name": "King's Fork HS",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "ae48fa02",
+		"registered": {
+			"name": "Landstown HS",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "jy60ox37",
+		"registered": {
+			"name": "Nandua HS",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "vm02we58",
+		"registered": {
+			"name": "Nansemond River HS",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "pn12nm38",
+		"registered": {
+			"name": "Norfolk Christian HS",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "sc85bc70",
+		"registered": {
+			"name": "Norfolk Technical Vocational Center",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "fq06fv21",
+		"registered": {
+			"name": "Princess Anne HS",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "ju67ac02",
+		"registered": {
+			"name": "Tallwood HS",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "ea92at13",
+		"registered": {
+			"name": "Virginia Beach Technical and Career Education Center",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "is81wi92",
+		"registered": {
+			"name": "Western Branch HS",
+			"parent": "jo43bu78"
+		}
+	},
+	{
+		"id": "md56yx37",
+		"registered": {
+			"name": "Chesterfield TC",
+			"parent": "gy25we79"
+		}
+	},
+	{
+		"id": "nf96zv32",
+		"registered": {
+			"name": "Colonial Heights HS",
+			"parent": "gy25we79"
+		}
+	},
+	{
+		"id": "gz01wo43",
+		"registered": {
+			"name": "Dinwiddie Senior HS",
+			"parent": "gy25we79"
+		}
+	},
+	{
+		"id": "mc14vz75",
+		"registered": {
+			"name": "Hopewell HS",
+			"parent": "gy25we79"
+		}
+	},
+	{
+		"id": "rw74cq28",
+		"registered": {
+			"name": "James River HS",
+			"parent": "gy25we79"
+		}
+	},
+	{
+		"id": "lm63ut46",
+		"registered": {
+			"name": "Midlothian HS",
+			"parent": "gy25we79"
+		}
+	},
+	{
+		"id": "zf29tv93",
+		"registered": {
+			"name": "Prince George HS",
+			"parent": "gy25we79"
+		}
+	},
+	{
+		"id": "gz94gf78",
+		"registered": {
+			"name": "Surry County HS",
+			"parent": "gy25we79"
+		}
+	},
+	{
+		"id": "mq86rx01",
+		"registered": {
+			"name": "Castlewood HS",
+			"parent": "on23hu59"
+		}
+	},
+	{
+		"id": "de14mq71",
+		"registered": {
+			"name": "Central HS",
+			"parent": "on23hu59"
+		}
+	},
+	{
+		"id": "de14mq71",
+		"placed": {
+			"town": "Norton"
+		}
+	},
+	{
+		"id": "jy64hz68",
+		"registered": {
+			"name": "Council HS",
+			"parent": "on23hu59"
+		}
+	},
+	{
+		"id": "iy13ex92",
+		"registered": {
+			"name": "Eastside HS",
+			"parent": "on23hu59"
+		}
+	},
+	{
+		"id": "ih86jv34",
+		"registered": {
+			"name": "Grundy HS",
+			"parent": "on23hu59"
+		}
+	},
+	{
+		"id": "iq52cs51",
+		"registered": {
+			"name": "Honaker HS",
+			"parent": "on23hu59"
+		}
+	},
+	{
+		"id": "gz18hw45",
+		"registered": {
+			"name": "Hurley HS",
+			"parent": "on23hu59"
+		}
+	},
+	{
+		"id": "tv21jm31",
+		"registered": {
+			"name": "Lebanon HS",
+			"parent": "on23hu59"
+		}
+	},
+	{
+		"id": "rp25jm72",
+		"registered": {
+			"name": "Lee County Vocational Technical Center",
+			"parent": "on23hu59"
+		}
+	},
+	{
+		"id": "qp18pk74",
+		"registered": {
+			"name": "Ridgeview HS",
+			"parent": "on23hu59"
+		}
+	},
+	{
+		"id": "rq18jt51",
+		"registered": {
+			"name": "Thomas Walker HS",
+			"parent": "on23hu59"
+		}
+	},
+	{
+		"id": "bs35nr30",
+		"registered": {
+			"name": "Twin Valley HS",
+			"parent": "on23hu59"
+		}
+	},
+	{
+		"id": "ed45zc38",
+		"registered": {
+			"name": "Union HS",
+			"parent": "on23hu59"
+		}
+	},
+	{
+		"id": "rc30sk12",
+		"registered": {
+			"name": "Virginia HS",
+			"parent": "on23hu59"
+		}
+	}
+]

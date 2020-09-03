@@ -18,7 +18,7 @@ import os
 #import os
 from jsonrpc.proxy import JSONRPCProxy
 client = JSONRPCProxy.from_url('http://localhost:8080/rpc/login')
-#client = JSONRPCProxy.from_url('https://exam-site.appspot.com/rpc/login')
+#client = JSONRPCProxy.from_url('https://gae_project.appspot.com/rpc/login')
 #client = JSONRPCProxy.from_url('http://localhost:8080/xadmin')
 
 
@@ -90,7 +90,7 @@ if __name__ == '__main__':
 #for item in client.list_all_events():
 #    print ("{}".format(item))
 #
-#exams_location = '/home/jwashin/vpythons/2012/vafbla/exams_test/'
+#exams_location = '/home/admin/vpythons/2012/vafbla/exams_test/'
 #
 #contest_info = json.load(open('test_quiz_data.json', 'r'))
 #

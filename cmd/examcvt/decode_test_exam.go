@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"sort"
 
-	"github.com/jwashin/fibula.git/pkg/exam"
+	"github.com/jwashin/fibula/pkg/exam"
 )
 
 func check(e error) {

@@ -36,23 +36,17 @@ func (a *App) Run(addr string) {
 	log.Fatal(http.ListenAndServe(addr, a.Router))
 }
 
-func (a *App) getEvent(w http.ResponseWriter, r *http.Request) {
+func (a *App) getContest(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 
 	idNum := vars["id"]
-	// key, err := datastore.DecodeKey(id)
-	// key := datastore.IDKey("Event", int64(idNum), nil)
-	// if err != nil {
-	// 	respondWithError(w, http.StatusNotFound, "Bad Key")
-	// }
-	// event := Event{ID: key}
-	var event Event
+	var contest Contest
 
-	if err := event.getEvent(a.DB, idNum); err != nil {
-		respondWithError(w, http.StatusNotFound, "Event not found")
+	if err := contest.getContest(a.DB, idNum); err != nil {
+		respondWithError(w, http.StatusNotFound, "Not found")
 		return
 	}
-	respondWithJSON(w, http.StatusOK, event)
+	respondWithJSON(w, http.StatusOK, contest)
 }
 
 func respondWithError(w http.ResponseWriter, code int, message string) {
@@ -67,19 +61,19 @@ func respondWithJSON(w http.ResponseWriter, code int, payload interface{}) {
 	w.Write(response)
 }
 
-func (a *App) getEvents(w http.ResponseWriter, r *http.Request) {
+func (a *App) getContests(w http.ResponseWriter, r *http.Request) {
 
-	events, err := getEvents(a.DB)
+	contests, err := getContests(a.DB)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, err.Error())
 		return
 	}
 
-	respondWithJSON(w, http.StatusOK, events)
+	respondWithJSON(w, http.StatusOK, contests)
 }
 
-func (a *App) createEvent(w http.ResponseWriter, r *http.Request) {
-	var e Event
+func (a *App) createContest(w http.ResponseWriter, r *http.Request) {
+	var e Contest
 	decoder := json.NewDecoder(r.Body)
 	if err := decoder.Decode(&e); err != nil {
 		respondWithError(w, http.StatusBadRequest, "Invalid request payload")
@@ -87,7 +81,7 @@ func (a *App) createEvent(w http.ResponseWriter, r *http.Request) {
 	}
 	defer r.Body.Close()
 
-	if err := e.createEvent(a.DB); err != nil {
+	if err := e.createContest(a.DB); err != nil {
 		respondWithError(w, http.StatusInternalServerError, err.Error())
 		return
 	}
@@ -95,34 +89,30 @@ func (a *App) createEvent(w http.ResponseWriter, r *http.Request) {
 	respondWithJSON(w, http.StatusCreated, e)
 }
 
-func (a *App) updateEvent(w http.ResponseWriter, r *http.Request) {
+func (a *App) updateContest(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	idNum := vars["id"]
-	// if err != nil {
-	// 	respondWithError(w, http.StatusBadRequest, "Invalid event ID")
-	// 	return
-	// }
-	var event Event
+	var contest Contest
 	decoder := json.NewDecoder(r.Body)
-	if err := decoder.Decode(&event); err != nil {
+	if err := decoder.Decode(&contest); err != nil {
 		respondWithError(w, http.StatusBadRequest, "Invalid request payload")
 		return
 	}
 	defer r.Body.Close()
 
-	if err := event.updateEvent(a.DB, idNum); err != nil {
+	if err := contest.updateContest(a.DB, idNum); err != nil {
 		respondWithError(w, http.StatusInternalServerError, err.Error())
 		return
 	}
 
-	respondWithJSON(w, http.StatusOK, event)
+	respondWithJSON(w, http.StatusOK, contest)
 }
 
-func (a *App) deleteEvent(w http.ResponseWriter, r *http.Request) {
+func (a *App) deleteContest(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	idNum := vars["id"]
-	var event Event
-	if err := event.deleteEvent(a.DB, idNum); err != nil {
+	var contest Contest
+	if err := contest.deleteContest(a.DB, idNum); err != nil {
 		respondWithError(w, http.StatusInternalServerError, err.Error())
 		return
 	}
@@ -131,10 +121,10 @@ func (a *App) deleteEvent(w http.ResponseWriter, r *http.Request) {
 }
 
 func (a *App) initializeRoutes() {
-	a.Router.HandleFunc("/events", a.getEvents).Methods("GET")
+	a.Router.HandleFunc("/contests", a.getContests).Methods("GET")
 	// a.Router.HandleFunc("/event/{id}", a.getEvent).Methods("GET")
-	a.Router.HandleFunc("/event", a.createEvent).Methods("POST")
-	a.Router.HandleFunc("/event/{id:[0-9]+}", a.getEvent).Methods("GET")
-	a.Router.HandleFunc("/event/{id:[0-9]+}", a.updateEvent).Methods("PUT")
-	a.Router.HandleFunc("/event/{id:[0-9]+}", a.deleteEvent).Methods("DELETE")
+	a.Router.HandleFunc("/contest", a.createContest).Methods("POST")
+	a.Router.HandleFunc("/contest/{id:[0-9]+}", a.getContest).Methods("GET")
+	a.Router.HandleFunc("/contest/{id:[0-9]+}", a.updateContest).Methods("PUT")
+	a.Router.HandleFunc("/contest/{id:[0-9]+}", a.deleteContest).Methods("DELETE")
 }

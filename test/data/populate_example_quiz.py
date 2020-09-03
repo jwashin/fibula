@@ -17,7 +17,7 @@ import json
 import os
 from jsonrpc.proxy import JSONRPCProxy
 client = JSONRPCProxy.from_url('http://localhost:8080/rpc/login')
-#client = JSONRPCProxy.from_url('https://exam-site.appspot.com/rpc/login')
+#client = JSONRPCProxy.from_url('https://gae_project.appspot.com/rpc/login')
 #client = JSONRPCProxy.from_url('http://localhost:8080/xadmin')
 #f = client.reverse('hello world!')
 #print f

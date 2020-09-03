@@ -1,0 +1,79 @@
+[
+	{
+		"id": "ab17bx81",
+		"registered": {
+			"name": "Blue Ridge Region",
+			"parent": "VA FBLA"
+		}
+	},
+	{
+		"id": "ei32oz39",
+		"registered": {
+			"name": "Capital Region",
+			"parent": "VA FBLA"
+		}
+	},
+	{
+		"id": "ry91zy80",
+		"registered": {
+			"name": "Colonial Region",
+			"parent": "VA FBLA"
+		}
+	},
+	{
+		"id": "hm34fe90",
+		"registered": {
+			"name": "Germanna Region",
+			"parent": "VA FBLA"
+		}
+	},
+	{
+		"id": "ia07ts70",
+		"registered": {
+			"name": "Longwood Region",
+			"parent": "VA FBLA"
+		}
+	},
+	{
+		"id": "ct50th38",
+		"registered": {
+			"name": "New River Region",
+			"parent": "VA FBLA"
+		}
+	},
+	{
+		"id": "sm10nj12",
+		"registered": {
+			"name": "Northern Virginia Region",
+			"parent": "VA FBLA"
+		}
+	},
+	{
+		"id": "ds98ep47",
+		"registered": {
+			"name": "Shenandoah Region",
+			"parent": "VA FBLA"
+		}
+	},
+	{
+		"id": "jo43bu78",
+		"registered": {
+			"name": "Tidewater Region",
+			"parent": "VA FBLA"
+		}
+	},
+	{
+		"id": "gy25we79",
+		"registered": {
+			"name": "Tri-Cities Region",
+			"parent": "VA FBLA"
+		}
+	},
+	{
+		"id": "on23hu59",
+		"registered": {
+			"name": "UVA’s College at Wise Region",
+			"parent": "VA FBLA"
+		}
+	}
+]
